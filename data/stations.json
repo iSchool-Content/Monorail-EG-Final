@@ -1,0 +1,10 @@
+[
+  { "id": 1, "name": "Heliopolis", "line": "NAC", "zone": 1 },
+  { "id": 2, "name": "Nasr City", "line": "NAC", "zone": 1 },
+  { "id": 3, "name": "El-Salam", "line": "NAC", "zone": 2 },
+  { "id": 4, "name": "El-Obour", "line": "NAC", "zone": 2 },
+  { "id": 5, "name": "NAC Central", "line": "NAC", "zone": 3 },
+  { "id": 6, "name": "Giza", "line": "6th October", "zone": 1 },
+  { "id": 7, "name": "Sheikh Zayed", "line": "6th October", "zone": 2 },
+  { "id": 8, "name": "6th of October", "line": "6th October", "zone": 3 }
+]
