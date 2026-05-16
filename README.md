@@ -1,6 +1,6 @@
 # Monorail EG - Cairo Monorail Capstone Project
 
-A backend system for Cairo's two monorail lines: NAC and 6th October.
+A backend system for Cairo's two monorail lines.
 
 ---
 
