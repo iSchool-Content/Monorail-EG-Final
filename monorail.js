@@ -15,10 +15,11 @@ if (!cmd) {
 
 if (cmd === 'stations') {
   const stations = getAllStations();
-  console.log(`All stations (${stations.length} total):\n`);
+  console.log('All stations (' + stations.length + ' total):');
+  console.log('');
 
   for (const station of stations) {
-    console.log(`  ${station.name} | Line: ${station.line} | Zone: ${station.zone}`);
+    console.log('  ' + station.name + ' | Line: ' + station.line + ' | Zone: ' + station.zone);
   }
 }
 
@@ -34,20 +35,21 @@ else if (cmd === 'line') {
   const stations = getStationsByLine(lineName);
 
   if (stations.length === 0) {
-    console.log(`No stations found for line: ${lineName}`);
+    console.log('No stations found for line: ' + lineName);
     process.exit(1);
   }
 
-  console.log(`${lineName} line - ${stations.length} stations:\n`);
+  console.log(lineName + ' line - ' + stations.length + ' stations:');
+  console.log('');
 
   for (const station of stations) {
-    console.log(`  ${station.name} | Zone: ${station.zone}`);
+    console.log('  ' + station.name + ' | Zone: ' + station.zone);
   }
 }
 
 else if (cmd === 'fare') {
   const fromName = args[1];
-  const toName   = args[2];
+  const toName = args[2];
 
   if (!fromName || !toName) {
     console.log('Please provide both station names.');
@@ -58,19 +60,19 @@ else if (cmd === 'fare') {
   const result = calculateFare(fromName, toName);
 
   if (result.error) {
-    console.log(`Error: ${result.error}`);
+    console.log('Error: ' + result.error);
     process.exit(1);
   }
 
   console.log('Fare estimate:');
-  console.log(`  From : ${result.from}`);
-  console.log(`  To   : ${result.to}`);
-  console.log(`  Line : ${result.line}`);
-  console.log(`  Fare : ${result.fare} ${result.currency}`);
+  console.log('  From : ' + result.from);
+  console.log('  To   : ' + result.to);
+  console.log('  Line : ' + result.line);
+  console.log('  Fare : ' + result.fare + ' ' + result.currency);
 }
 
 else {
-  console.log(`Unknown command: ${cmd}`);
+  console.log('Unknown command: ' + cmd);
   console.log('Run node monorail.js to see available commands.');
   process.exit(1);
 }
