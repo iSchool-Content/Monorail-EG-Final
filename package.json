@@ -2,6 +2,7 @@
   "name": "monorail-eg",
   "version": "1.0.0",
   "description": "Cairo Monorail Transit - iSchool Capstone Project",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
